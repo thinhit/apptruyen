@@ -1,0 +1,36 @@
+<section id="primary-page">
+        
+        <section id="story-detail">
+
+
+        	<section class="pull-right">
+				<a href="">Phần 1</a>        			
+        	</section>
+
+
+        	<section class="story-info" class="pull-left">
+	        	<h2 class="title-box ">{{storyItem.title}}</h2>
+	        	<p><strong>Tác giả</strong> : {{storyItem.createBy}}</p>
+        	</section>
+        	
+			
+			<section class="story-content" ng-bind-html="storyItem.content">
+				
+
+			</section>        		
+            
+        </section>
+
+        <section id="comment">
+        	<h2 class="title-box ">Bình luận</h2>
+			<form>
+				<textarea placeholder="Nhập bình luận"></textarea>
+				<button class="pull-right">
+					Bình luận
+				</button>
+			</form>
+        </section>
+
+
+
+    </section>

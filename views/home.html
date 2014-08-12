@@ -1,0 +1,160 @@
+<section id="primary-page">
+        <h2 class="title-box">Danh mục</h2>
+
+        <section id="category">
+
+            <section class="col-md-6 col-sm-6 col-xs-6">
+                <ul>
+                    <li ng-repeat="(key, value) in listCategory.slice(0, 3)" style="background:{{value.color}};"><a href="" ng-click="$state.go('app.category', {categoryId: value.id})">{{value.name}}</a></li>
+                    <!-- <li style="background:#e67e22;"><a href="">Truyện cũ</a></li>
+                    <li style="background:#7f8c8d;"><a href="">Truyện cười</a></li> -->
+                </ul>
+            </section>
+            <section class="col-md-6 col-sm-6 col-xs-6">
+                <ul>
+                    <li ng-repeat="(key, value) in listCategory.slice(3, 6)" style="background:{{value.color}};"><a href="" ng-click="$state.go('app.category', {categoryId: value.id})">{{value.name}}</a></li>
+                </ul>
+            </section>
+        </section>
+
+
+		<h2 class="title-box">Truyện mới cập nhật</h2>
+        <section id="list-story">
+
+            <section class="media" ng-repeat="item in listStories">
+                <a class="pull-left" href="" ng-click="$state.go('app.detail',{storyId: item.id})">
+                    <img class="media-object" src="{{mediaHost + item.thumb}}" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                	<strong>{{item.views}}</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="" ng-click="$state.go('app.detail',{storyId: item.id})">{{item.title}}</a></h4>
+                    <p><strong>Cập nhật</strong> : {{item.createAt}}</p>
+                    <p><strong>Tác giả</strong> : {{item.createBy}}</p>
+                </div>
+                
+            </section>
+            
+
+            <!-- <section class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/truyen1.jpg" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>10</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">Người Tình Giấu Mặt (Full)</a></h4>
+                    <p><strong>Xuất bản</strong> : 2014</p>
+                    <p><strong>Tác giả</strong> : ThịnhNV</p>
+                </div>
+                
+            </section>
+            
+            <section class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/truyen4.jpg" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>10</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">Cô chủ nhỏ xinh đẹp của tôi</a></h4>
+                    <p><strong>Xuất bản</strong> : 2014</p>
+                    <p><strong>Tác giả</strong> : ThịnhNV</p>
+                </div>
+                
+            </section>
+            
+            <section class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/truyen3.jpg" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>10</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">Chị ơi ! anh yêu em</a></h4>
+                    <p><strong>Xuất bản</strong> : 2014</p>
+                    <p><strong>Tác giả</strong> : ThịnhNV</p>
+                </div>
+                
+            </section>
+            
+            <section class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/truyen2.jpg" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>10</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">Chị ơi ! anh yêu em</a></h4>
+                    <p><strong>Xuất bản</strong> : 2014</p>
+                    <p><strong>Tác giả</strong> : ThịnhNV</p>
+                </div>
+                
+            </section>
+            
+            <section class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/truyen1.jpg" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>10</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">Chị ơi ! anh yêu em</a></h4>
+                    <p><strong>Xuất bản</strong> : 2014</p>
+                    <p><strong>Tác giả</strong> : ThịnhNV</p>
+                </div>
+                
+            </section>
+            
+            <section class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/truyen4.jpg" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>10</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">Chị ơi ! anh yêu em</a></h4>
+                    <p><strong>Xuất bản</strong> : 2014</p>
+                    <p><strong>Tác giả</strong> : ThịnhNV</p>
+                </div>
+                
+            </section>
+            
+            <section class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/truyen2.jpg" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>10</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">Chị ơi ! anh yêu em</a></h4>
+                    <p><strong>Xuất bản</strong> : 2014</p>
+                    <p><strong>Tác giả</strong> : ThịnhNV</p>
+                </div>
+                
+            </section>
+            
+            <section class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/truyen1.jpg" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>10</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="">Chị ơi ! anh yêu em</a></h4>
+                    <p><strong>Xuất bản</strong> : 2014</p>
+                    <p><strong>Tác giả</strong> : ThịnhNV</p>
+                </div>
+                
+            </section> -->
+        </section>
+    </section>

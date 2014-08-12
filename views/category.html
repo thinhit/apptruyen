@@ -1,0 +1,20 @@
+    <section id="primary-page">
+		<h2 class="title-box">Truyện nổi bật</h2>
+        <section id="list-story">
+            
+            <section class="media" ng-repeat="item in categoryItem">
+                <a class="pull-left" href="" ng-click="$state.go('app.detail',{storyId: item.id})">
+                    <img class="media-object" src="{{mediaHost + item.thumb}}" alt="...">
+                </a>
+                <p class="pull-right text-center">
+                    <strong>{{item.views}}</strong> <br/> lượt xem
+                </p>
+                <div class="media-body">
+                    <h4 class="media-heading"><a href="" ng-click="$state.go('app.detail',{storyId: item.id})">{{item.title}}</a></h4>
+                    <p><strong>Cập nhật</strong> : {{item.createAt}}</p>
+                    <p><strong>Tác giả</strong> : {{item.createBy}}</p>
+                </div>
+                
+            </section>
+        </section>
+    </section>

@@ -1,0 +1,28 @@
+<section id="primary-page">
+                <h2 class="title-box">Viet truyen moi</h2>
+                <section id="story-detail">
+                    <form action="">
+                        <label for="#name">Tieu de</label>
+                        <input type="text" class="form-control" ng-model="story.title">
+
+                        <label for="#name">Thumbnail</label>
+                        <img ng-src="{{mediaHost + story.thumb}}" alt="">
+                        <input type="file" name="pic" id="changeAva" ng-file-select="uploads($files, story)">
+                        <!-- <input type="text" class="form-control" ng-model="story.thumb"> -->
+
+
+						<label for="#name">The loai</label>
+						<select class="form-control" ng-model="story.categoryId" ng-options="story.id as story.name for story in listCategory">
+							<option value="">-- Chon chuyen muc -- </option>
+						</select>
+                        
+
+                        <label for="#name">Noi dung</label>
+                        <textarea name="content" id="" cols="30" rows="10" class="form-control" ng-model="story.content"></textarea>
+
+                        <button class="pull-right" ng-click="createNewStory(story)">
+                            Tao bai viet
+                        </button>
+                    </form>
+                </section>
+    </section>
