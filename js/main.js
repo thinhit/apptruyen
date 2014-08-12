@@ -13,7 +13,7 @@ angular.module('waptruyen', [
     'angularFileUpload'
 ])
 
-.config(function ($urlRouterProvider, $stateProvider, $httpProvider) {
+.config(['$urlRouterProvider', '$stateProvider', '$httpProvider', function ($urlRouterProvider, $stateProvider, $httpProvider) {
 	$stateProvider
 		.state('app', {
 			templateUrl: '/views/app.html',
@@ -45,8 +45,8 @@ angular.module('waptruyen', [
 
 		;
 
-	$urlRouterProvider.otherwise("/");
-})
+	$urlRouterProvider.otherwise("/create");
+}])
 .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams){
 	console.log('Application runing ...');
 	/*

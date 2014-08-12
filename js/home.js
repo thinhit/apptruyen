@@ -1,8 +1,8 @@
 
-var app = angular.module('waptruyen');
+angular.module('waptruyen')
 
 
-app.service('appStore', ['$rootScope', '$collection', function($rootScope, $collection){
+.service('appStore', ['$rootScope', '$collection', function($rootScope, $collection){
 	var store = {};
 	store['Categories'] = $collection.getInstance()
 	store['Stories'] = $collection.getInstance()
@@ -10,7 +10,7 @@ app.service('appStore', ['$rootScope', '$collection', function($rootScope, $coll
 }])
 
 
-app.controller('homeCtrl', ['$scope', '$http','$rootScope','appStore', function($scope, $http, $rootScope, appStore){
+.controller('homeCtrl', ['$scope', '$http','$rootScope','appStore', function($scope, $http, $rootScope, appStore){
 	console.log('Home Controller', 'start', true);
 
 	$scope.listCategory = [];
@@ -183,5 +183,5 @@ app.controller('homeCtrl', ['$scope', '$http','$rootScope','appStore', function(
 
 
 
-}])
+}]);
 
